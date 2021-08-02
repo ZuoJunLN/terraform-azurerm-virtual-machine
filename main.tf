@@ -99,6 +99,11 @@ resource "azurerm_linux_virtual_machine" "linux" {
     storage_account_type      = var.operating_system_disk_type
     write_accelerator_enabled = var.operating_system_disk_write_accelerator
   }
+
+  identity {
+    type          = var.mid_type
+    identity_ids  = var.mid_list
+  }
 }
 
 

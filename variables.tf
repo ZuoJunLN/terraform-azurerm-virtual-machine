@@ -135,3 +135,13 @@ variable "public_ip_sku" {
   type        = string
   default     = "Standard"
 }
+
+variable "mid_type" {
+  description = "managed identity type"
+  type        = string
+}
+
+variable "mid_list" {
+  description = "managed identity id list"
+  type        = list
+}
